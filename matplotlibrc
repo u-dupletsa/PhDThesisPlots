@@ -1,0 +1,13 @@
+# Enable LaTeX rendering
+text.usetex : True
+
+# Set font families
+font.family : serif
+font.serif : Palatino Linotype, Palatino, TeX Gyre Pagella, Times New Roman
+font.sans-serif : Helvetica, Arial
+
+# Math text settings
+mathtext.fontset : custom
+mathtext.rm : Palatino
+mathtext.it : Palatino:italic
+mathtext.bf : Palatino:bold
