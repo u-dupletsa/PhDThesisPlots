@@ -94,9 +94,15 @@
 
     
     % phi angles
-    \pic[draw, -, angle eccentricity=1.2, angle radius=1.5cm, color = myorange] {angle = J--O--L};
-    \pic[draw, -, angle eccentricity=1.2, angle radius=1.45cm, color = myorange] {angle = J--O--L};
-    \node[myorange] at ($(O)+(0.75,1.6)$) {\texttt{phi}$_{JL}$};
+    %\pic[draw, -, angle eccentricity=1.2, angle radius=1.5cm, color = myorange] {angle = J--O--L};
+    %\pic[draw, -, angle eccentricity=1.2, angle radius=1.45cm, color = myorange] {angle = J--O--L};
+    %\node[myorange] at ($(O)+(0.75,1.6)$) {\texttt{phi}$_{JL}$};
+    \coordinate (Jproj) at (-0.75, -1.25);
+    \coordinate (xAxis) at (0, 0, \axisLength);
+    \draw[->, solid, myorange] (O) -- (Jproj);
+    % phi angles
+    \pic[draw, -, angle eccentricity=1.2, angle radius=0.6cm, color = myorange, fill = myorange!50] {angle = xAxis--O--Jproj};
+    \node[myorange] at ($(O)+(-0.85,-0.4)$) {\texttt{phi}$_{JL}$};
 
     \draw[-,thick, darkslategraylighter, dashed] (S1_origin) -- (S1_proj);
     \draw[-,thick, darkslategraylighter, dashed] (S2_origin) -- (S2_proj);
@@ -104,7 +110,7 @@
     \draw[-, darkslategraylighter, dotted] (O) -- (S1_proj);
     \draw[-, darkslategraylighter, dotted] (O) -- (S2_proj);
     \pic[draw, -, angle eccentricity=1.2, angle radius=0.15cm, color = black, fill = darkslategraylighter] {angle = S1_proj--O--S2_proj};
-    \node[darkslategraylighter] at ($(O)+(-0.4,-0.3)$) {\texttt{phi}$_{12}$};
+    \node[darkslategraylighter] at ($(O)+(-0.6,-0.05)$) {\texttt{phi}$_{12}$};
     
 \end{tikzpicture}
 \end{document}
